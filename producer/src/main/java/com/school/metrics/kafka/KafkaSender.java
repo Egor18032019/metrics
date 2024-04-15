@@ -2,7 +2,6 @@ package com.school.metrics.kafka;
 
 import com.school.metrics.model.MetricModel;
 import com.school.metrics.utils.EndPoint;
-import com.school.metrics.utils.Metrics;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.kafka.core.KafkaTemplate;
@@ -17,6 +16,7 @@ public class KafkaSender {
 
 
     public void sendMetrics(MetricModel model) {
-        kafkaTemplate.send(EndPoint.topic, model);
+        kafkaTemplate.send(EndPoint.topic, model.getId().toString(), model);
+//        kafkaTemplate.send(EndPoint.topic, model);
     }
 }
