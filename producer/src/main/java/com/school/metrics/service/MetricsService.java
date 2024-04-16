@@ -6,7 +6,6 @@ import com.school.metrics.utils.Metrics;
 import io.micrometer.core.instrument.MeterRegistry;
 import io.micrometer.core.instrument.search.MeterNotFoundException;
 import lombok.AllArgsConstructor;
-import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
@@ -37,8 +36,6 @@ public class MetricsService implements MetricsServiceCommon {
             sender.sendMetrics(metricModel);
             System.out.println(metricModel.toString());
         }
-        // по одной или сразу списком ?
-
     }
 }
 

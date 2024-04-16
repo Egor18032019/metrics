@@ -18,7 +18,7 @@ public class MetricsController {
     MetricsServiceCommon service;
 
     @PostMapping
-    @Operation(summary = "Сохранение метрик")
+    @Operation(summary = "Получение метрик и отправка их в кафку.")
     public void collectMetrics() {
         service.sendMetrics();
     }

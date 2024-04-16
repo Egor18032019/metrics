@@ -4,7 +4,7 @@ Producer Service:
 
 Создан микросервис который при Post запросе ->
 собираеть метрики работы приложения
-и отправлять их в Kafka топик "metrics-app-topic".
+и отправлять их в Kafka топик "metrics-topic".
 UI работает на http://localhost:8090/ui/
  
 Пример запроса:

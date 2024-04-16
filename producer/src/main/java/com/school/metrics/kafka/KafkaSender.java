@@ -16,6 +16,7 @@ public class KafkaSender {
 
 
     public void sendMetrics(MetricModel model) {
+        //ToDo сделать транзакции
         kafkaTemplate.send(EndPoint.topic, model.getId().toString(), model);
 //        kafkaTemplate.send(EndPoint.topic, model);
     }
