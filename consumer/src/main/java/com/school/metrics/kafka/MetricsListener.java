@@ -4,6 +4,7 @@ import com.school.metrics.mapper.MetricsMapper;
 import com.school.metrics.model.MetricModel;
 import com.school.metrics.store.MetricsEntity;
 import com.school.metrics.store.MetricsRepository;
+import jakarta.transaction.Transactional;
 import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
 import lombok.experimental.FieldDefaults;
@@ -13,6 +14,7 @@ import org.springframework.stereotype.Component;
 
 @Slf4j
 @Component
+@Transactional
 @RequiredArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
 public class MetricsListener {
